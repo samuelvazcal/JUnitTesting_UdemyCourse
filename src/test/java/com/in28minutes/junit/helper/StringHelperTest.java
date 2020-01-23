@@ -25,6 +25,17 @@ public class StringHelperTest {
 	public void testTruncateAInFirst2Positions2() {
 		assertEquals("CD", helper.truncateAInFirst2Positions("ACD"));
 	}
+	
+	@Test
+	public void testTruncateAInFirst2Positions3() {
+		assertEquals("CDEF",helper.truncateAInFirst2Positions("CDEF"));
+	}
+	
+	@Test
+	public void testTruncateAInFirst2Positions4() {
+		assertEquals("CDAA",helper.truncateAInFirst2Positions("CDAA"));
+	}
+	
 	@Test
 	public void testAreFirstAndLastTwoCharactersTheSame_BasicFalseScenario() {
 		//assertEquals(false, helper.areFirstAndLastTwoCharactersTheSame("ABCD"));

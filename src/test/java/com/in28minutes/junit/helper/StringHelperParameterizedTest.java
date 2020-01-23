@@ -35,7 +35,7 @@ public class StringHelperParameterizedTest {
 	//This method is expecting a collection, not an array, that's why we need to convert an array into a collection
 	@Parameters
 	public static Collection<String[]> testConditions() {
-		String expectedOutputs[][]={ {"AACD","CD"},{"ACD","CD"}};
+		String expectedOutputs[][]={ {"AACD","CD"},{"ACD","CD"},{"CDEF","CDEF"},{"CDAA","CDAA"}};
 		return Arrays.asList(expectedOutputs);
 	}
 	
@@ -49,7 +49,12 @@ public class StringHelperParameterizedTest {
 	public void testTruncateAInFirst2Positions2() {
 		assertEquals(expectedOutput, helper.truncateAInFirst2Positions(input));
 	}
-
-	
-
+	@Test
+	public void testTruncateAInFirst2Positions3() {
+		assertEquals(expectedOutput, helper.truncateAInFirst2Positions(input));
+	}
+	@Test
+	public void testTruncateAInFirst2Positions4() {
+		assertEquals(expectedOutput, helper.truncateAInFirst2Positions(input));
+	}
 }
