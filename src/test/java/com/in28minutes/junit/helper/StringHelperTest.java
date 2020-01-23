@@ -15,6 +15,7 @@ public class StringHelperTest {
 		//Calling the first method to be tested
 		//actual is where the value from --- helper.truncateAInFirst2Positions("AACD") ---  is saved 
 		
+		//Asserts that two objects are equal
 		//AACD => CD ACD=> CD CDEF=>CDEF CDAA => CDAA
 		assertEquals("CD", helper.truncateAInFirst2Positions("AACD"));
 		//There are two arguments, where:
@@ -24,5 +25,18 @@ public class StringHelperTest {
 	public void testTruncateAInFirst2Positions2() {
 		assertEquals("CD", helper.truncateAInFirst2Positions("ACD"));
 	}
+	@Test
+	public void testAreFirstAndLastTwoCharactersTheSame_BasicFalseScenario() {
+		//assertEquals(false, helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+		//assertFalse checks if the actual value is false
+		//assertFalse("The condition failed!", helper.areFirstAndLastTwoCharactersTheSame it will
+		//show the message if the assert fails
+		assertFalse(helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+	}
+	@Test
+	public void testAreFirstAndLastTwoCharactersTheSame_BasicTrueScenario() {
+		assertTrue(helper.areFirstAndLastTwoCharactersTheSame("ABAB"));
+	}
+	
 
 }
